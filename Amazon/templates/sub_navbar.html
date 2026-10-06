@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/sub_navbar.css" />
+    <style src="static/js/sub_navbar.js"></style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar_content">
+        <div class="profile_section">
+          <i class="fa-solid fa-user"></i>
+          <h3 class="sign_in_text">Hello, Sign In</h3>
+        </div>
+
+        <div class="content_section">
+          {% for items in data %}
+          <h3>{{ items.title }}</h3>
+          {% for product_items in items.items %}
+          <p>{{ product_items.name}}</p>
+          {% endfor %}
+          <hr />
+          {%endfor%}
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+
+
+      <div onclick="" class="cross_bar" >
+        <i onclick= "hideSidebar()" class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+  </body>
+</html>
